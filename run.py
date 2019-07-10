@@ -28,7 +28,7 @@ def create_graph(model_dir):
 
 def main():
   #目录设置
-  model_dir='/home/pi/Desktop/object_detection'
+  model_dir='/home/pi/Desktop/object_detection_on_pi'
   image_path='/home/pi/Desktop'
   images=os.listdir(image_path)
   #读取标签
