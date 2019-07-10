@@ -1,5 +1,5 @@
-# object_detection_on_pi
-A simple object detection on RaspberryPi(Inspection V3 based on TensorFlow)</br>
+# Object_Detection_on_pi
+A simple object detection on RaspberryPi(using Inspection V3 based on TensorFlow)</br>
 ## requiements</br>
   -tensorflow</br>
 ## settings</br>
