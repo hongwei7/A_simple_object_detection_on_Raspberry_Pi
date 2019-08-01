@@ -9,7 +9,7 @@ def get_host_ip():
     finally:
         s.close()
 
-    return '192.16.9.101'
+    return ip
 def catch_pic():
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36'}
