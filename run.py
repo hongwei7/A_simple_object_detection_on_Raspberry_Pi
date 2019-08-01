@@ -6,6 +6,7 @@ import re
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import time
+from resize import resize
 #将类别ID转换为标签
 def load_index(model_dir):
   word_re=re.compile(r'.*')
@@ -49,6 +50,7 @@ def main():
     result=[]
     for image in images:
       if image[-3:] in ['jpg','JPG','peg','PEG']:
+        resize(image_path+'/'+image)
         image_data = tf.gfile.FastGFile(image_path+'/'+image, 'rb').read()
         #输入图像数据，得到softmax概率值（一个shape=(1,1008)的向量）
         print('已拍摄')
@@ -57,7 +59,7 @@ def main():
         predictions = np.squeeze(predictions)
         objects=''
         split=','
-        max_predict_num=3
+        max_predict_num=2
         for i in range(max_predict_num):
           if i==max_predict_num-1:
             split=' 或者 '

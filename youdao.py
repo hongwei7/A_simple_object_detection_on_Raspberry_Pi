@@ -34,8 +34,8 @@ for line in file.readlines():
             url=urllib.request.urlopen(val,data)
             html = url.read().decode('utf-8')
             a = json.loads(html)
-            print("翻译结果：%s" % (a['translateResult'][0][0]['tgt']))
-            result=result+a['translateResult'][0][0]['tgt']+'\n'
+            print(content,"翻译结果：%s" % (a['translateResult'][0][0]['tgt']))
+            result=result+content+' '+a['translateResult'][0][0]['tgt']+'\n'
 result=result[:-1]
 file.close()
 file=open('traned_imagenet_synset_to_human_label_map.txt','w')
