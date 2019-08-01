@@ -1,6 +1,11 @@
-import requests
-import socket
 
+#!/usr/bin/env python
+# encoding=utf-8
+ 
+import time     #导入定时
+import requests  #导入url
+import re       #导入正则
+import socket
 def get_host_ip():
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -9,10 +14,16 @@ def get_host_ip():
     finally:
         s.close()
 
-    return ip
+    return '192.16.9.101'
 def catch_pic():
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36'}
-    url = 'http://'+str(get_host_ip())+':8080/?action=snapshot'
-    pic = requests.get(url, headers=headers)
-    return pic
+    req = requests.get("http://"+get_host_ip()+":8080/?action=snapshot")
+    buf = req.content
+    return buf
+def test():
+    f = open('keychain.jpg','wb')
+    print('test')
+    f.write(catch_pic())
+    f.close()
+
+if __name__ == '__main__':
+    test()
