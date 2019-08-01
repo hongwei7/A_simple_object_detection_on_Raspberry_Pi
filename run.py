@@ -4,6 +4,7 @@ import tensorflow as tf
 import numpy as np
 import re
 import os
+from catch_mjpeg import *
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import time
 from resize import resize
@@ -45,8 +46,11 @@ def main():
   #开始预测 
   j=0
   while(j<k):
-    print('第%d次检测!'%(j+1))
-    os.system("raspistill -o /home/pi/Desktop/keychain.jpg -t 500")
+    print('第%d次检测! 按下回车拍摄'%(j+1))
+    input()
+    f = open('/home/pi/Desktop/keychain.jpg','ab')
+    f.write(catch_pic())
+    f.close()
     result=[]
     for image in images:
       if image[-3:] in ['jpg','JPG','peg','PEG']:
