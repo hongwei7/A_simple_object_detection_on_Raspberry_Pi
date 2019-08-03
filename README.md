@@ -1,7 +1,8 @@
 # Object_Detection_on_pi
 A simple object detection on RaspberryPi(using Inspection V3 based on TensorFlow)</br>
 ### 安装依赖</br>
-  tensorflow</br>
+-  tensorflow</br>
+-  mjpeg-streamer</br>
 ### 设置路径</br>
 在run.py第31行设置路径</br>
 ### 运行
@@ -11,8 +12,8 @@ A simple object detection on RaspberryPi(using Inspection V3 based on TensorFlow
 ## ENG
 A simple object detection on RaspberryPi(using Inspection V3 based on TensorFlow)</br>
 ### requiements</br>
-  -tensorflow</br>
-### settings</br>
+-  tensorflow</br>
+-  mjpeg-streamer</br>### settings</br>
 set your own path in run.py</br>
 ### run
 run run.py in bash</br>
