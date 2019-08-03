@@ -48,7 +48,7 @@ def main():
   while(j<k):
     print('第%d次检测! 按下回车拍摄'%(j+1))
     input()
-    f = open('/home/pi/Desktop/keychain.jpg','ab')
+    f = open('/home/pi/Desktop/keychain.jpg','wb')
     f.write(catch_pic())
     f.close()
     result=[]

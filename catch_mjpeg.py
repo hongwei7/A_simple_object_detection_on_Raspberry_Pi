@@ -14,16 +14,10 @@ def get_host_ip():
     finally:
         s.close()
 
-    return '192.16.9.101'
+    return ip
 def catch_pic():
     req = requests.get("http://"+get_host_ip()+":8080/?action=snapshot")
-    buf = req.content
+    buf = req.content      
     return buf
-def test():
-    f = open('keychain.jpg','wb')
-    print('test')
-    f.write(catch_pic())
-    f.close()
+ 
 
-if __name__ == '__main__':
-    test()
