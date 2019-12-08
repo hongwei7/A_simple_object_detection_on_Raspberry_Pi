@@ -6,7 +6,7 @@ A simple object detection on RaspberryPi(using Inspection V3 based on TensorFlow
 ### 设置路径</br>
 在run.py第31行设置路径</br>
 ### 运行
-在bash中运行run.py</br>
+运行run.py</br>
 <code>python3 run.py</code></br>
 标签已经过有道翻译机翻，支持一千多种物体检测，数据基于ImageNet。
 ## ENG
